@@ -11830,7 +11830,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="R-&#35486;&#35328;&#30340;&#23383;&#20018;&#20989;&#25976;">R &#35486;&#35328;&#30340;&#23383;&#20018;&#20989;&#25976;<a class="anchor-link" href="#R-&#35486;&#35328;&#30340;&#23383;&#20018;&#20989;&#25976;">&#182;</a></h1><h2 id="&#37101;&#32768;&#20161;">&#37101;&#32768;&#20161;<a class="anchor-link" href="#&#37101;&#32768;&#20161;">&#182;</a></h2>
+<h1 id="R-&#35486;&#35328;&#30340;&#25991;&#23383;&#20989;&#25976;">R &#35486;&#35328;&#30340;&#25991;&#23383;&#20989;&#25976;<a class="anchor-link" href="#R-&#35486;&#35328;&#30340;&#25991;&#23383;&#20989;&#25976;">&#182;</a></h1><h2 id="&#37101;&#32768;&#20161;">&#37101;&#32768;&#20161;<a class="anchor-link" href="#&#37101;&#32768;&#20161;">&#182;</a></h2>
 </div>
 </div>
 </div></section></section><section><section>
@@ -11847,8 +11847,12 @@ a.anchor-link {
 <li><code>tolower()</code></li>
 <li><code>substr()</code></li>
 <li><code>strsplit()</code></li>
+<li><code>regexpr()</code></li>
+<li><code>gregexpr()</code></li>
 <li><code>grep()</code></li>
+<li><code>grepl()</code></li>
 <li><code>sub()</code></li>
+<li><code>gsub()</code></li>
 </ul>
 
 </div>
@@ -12273,12 +12277,12 @@ a_sentence <span class="o">&lt;-</span> <span class="s">&quot;How you doing?&quo
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="grep()"><code>grep()</code><a class="anchor-link" href="#grep()">&#182;</a></h2><ul>
-<li>尋找文字中的指定特徵並回傳索引值</li>
-<li><code>grep(pattern = , x, fixed = TRUE)</code></li>
+<h2 id="regexpr()"><code>regexpr()</code><a class="anchor-link" href="#regexpr()">&#182;</a></h2><ul>
+<li>尋找單一文字中的指定特徵並回傳第一個找到的索引值</li>
+<li><code>regexpr(pattern = , x, fixed = TRUE)</code></li>
 </ul>
-<div class="highlight"><pre><span></span>a_sentence <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;We&quot;</span><span class="p">,</span> <span class="s">&quot;were&quot;</span><span class="p">,</span> <span class="s">&quot;on&quot;</span><span class="p">,</span> <span class="s">&quot;a&quot;</span><span class="p">,</span> <span class="s">&quot;break!&quot;</span><span class="p">)</span>
-<span class="c1"># 尋找 were、on 與 hello</span>
+<div class="highlight"><pre><span></span>a_sentence <span class="o">&lt;-</span> <span class="s">&quot;we were on a break!&quot;</span>
+<span class="c1"># 尋找 we</span>
 </pre></div>
 
 </div>
@@ -12289,10 +12293,126 @@ a_sentence <span class="o">&lt;-</span> <span class="s">&quot;How you doing?&quo
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># regexpr(pattern = , x, fixed = TRUE)</span>
+
+a_sentence <span class="o">&lt;-</span> <span class="s">&quot;we were on a break!&quot;</span>
+<span class="kp">regexpr</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;we&quot;</span><span class="p">,</span> a_sentence<span class="p">,</span> fixed <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+1
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="gregexpr()"><code>gregexpr()</code><a class="anchor-link" href="#gregexpr()">&#182;</a></h2><ul>
+<li>尋找單一文字中的指定特徵並回傳全部的索引值</li>
+<li><code>gregexpr(pattern = , x, fixed = TRUE)</code></li>
+</ul>
+<div class="highlight"><pre><span></span>a_sentence <span class="o">&lt;-</span> <span class="s">&quot;we were on a break!&quot;</span>
+<span class="c1"># 尋找 we</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># gregexpr(pattern = , x, fixed = TRUE)</span>
+
+a_sentence <span class="o">&lt;-</span> <span class="s">&quot;we were on a break!&quot;</span>
+<span class="kp">gregexpr</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;we&quot;</span><span class="p">,</span> a_sentence<span class="p">,</span> fixed <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+<ol>
+	<li><ol class=list-inline>
+	<li>1</li>
+	<li>4</li>
+</ol>
+</li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#32244;&#32722;">&#32244;&#32722;<a class="anchor-link" href="#&#32244;&#32722;">&#182;</a></h2><ul>
+<li>尋找所有的 smelly</li>
+</ul>
+<div class="highlight"><pre><span></span>a_sentence <span class="o">&lt;-</span> <span class="s">&quot;smelly cat, smelly cat, what are they feeding you?&quot;</span>
+<span class="kp">gregexpr</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;____&quot;</span><span class="p">,</span> a_sentence<span class="p">,</span> fixed <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="grep()"><code>grep()</code><a class="anchor-link" href="#grep()">&#182;</a></h2><ul>
+<li>尋找文字中的指定特徵並回傳索引值</li>
+<li><code>grep(pattern = , x, fixed = TRUE)</code></li>
+</ul>
+<div class="highlight"><pre><span></span>a_sentence <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;we&quot;</span><span class="p">,</span> <span class="s">&quot;were&quot;</span><span class="p">,</span> <span class="s">&quot;on&quot;</span><span class="p">,</span> <span class="s">&quot;a&quot;</span><span class="p">,</span> <span class="s">&quot;break!&quot;</span><span class="p">)</span>
+<span class="c1"># 尋找 we、on 與 hello</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># grep(pattern = , x, fixed = TRUE)</span>
 
-a_sentence <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;We&quot;</span><span class="p">,</span> <span class="s">&quot;were&quot;</span><span class="p">,</span> <span class="s">&quot;on&quot;</span><span class="p">,</span> <span class="s">&quot;a&quot;</span><span class="p">,</span> <span class="s">&quot;break!&quot;</span><span class="p">)</span>
-<span class="kp">grep</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;were&quot;</span><span class="p">,</span> a_sentence<span class="p">,</span> fixed <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+a_sentence <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;we&quot;</span><span class="p">,</span> <span class="s">&quot;were&quot;</span><span class="p">,</span> <span class="s">&quot;on&quot;</span><span class="p">,</span> <span class="s">&quot;a&quot;</span><span class="p">,</span> <span class="s">&quot;break!&quot;</span><span class="p">)</span>
+<span class="kp">grep</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;we&quot;</span><span class="p">,</span> a_sentence<span class="p">,</span> fixed <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
 <span class="kp">grep</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;on&quot;</span><span class="p">,</span> a_sentence<span class="p">,</span> fixed <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
 <span class="kp">grep</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;hello&quot;</span><span class="p">,</span> a_sentence<span class="p">,</span> fixed <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span> <span class="c1"># 找不到回傳 integer(0)</span>
 </pre></div>
@@ -12308,7 +12428,11 @@ a_sentence <span class="o">&lt;-</span> <span class="kt">c</span><span class="p"
 <div class="output_area"><div class="prompt"></div>
 
 <div class="output_html rendered_html output_subarea ">
-2
+<ol class=list-inline>
+	<li>1</li>
+	<li>2</li>
+</ol>
+
 </div>
 
 </div>
@@ -12353,6 +12477,58 @@ a_sentence <span class="o">&lt;-</span> <span class="kt">c</span><span class="p"
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="grepl()"><code>grepl()</code><a class="anchor-link" href="#grepl()">&#182;</a></h2><ul>
+<li>跟 <code>grep()</code> 相似，只是以邏輯值（logical）回傳而非索引值</li>
+<li><code>grepl(pattern = , x, fixed = TRUE)</code></li>
+</ul>
+<div class="highlight"><pre><span></span>a_sentence <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;we&quot;</span><span class="p">,</span> <span class="s">&quot;were&quot;</span><span class="p">,</span> <span class="s">&quot;on&quot;</span><span class="p">,</span> <span class="s">&quot;a&quot;</span><span class="p">,</span> <span class="s">&quot;break!&quot;</span><span class="p">)</span>
+<span class="c1"># 尋找 we</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>a_sentence <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;we&quot;</span><span class="p">,</span> <span class="s">&quot;were&quot;</span><span class="p">,</span> <span class="s">&quot;on&quot;</span><span class="p">,</span> <span class="s">&quot;a&quot;</span><span class="p">,</span> <span class="s">&quot;break!&quot;</span><span class="p">)</span>
+<span class="kp">grepl</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;we&quot;</span><span class="p">,</span> a_sentence<span class="p">,</span> fixed <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>TRUE</li>
+	<li>TRUE</li>
+	<li>FALSE</li>
+	<li>FALSE</li>
+	<li>FALSE</li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="sub()"><code>sub()</code><a class="anchor-link" href="#sub()">&#182;</a></h2><ul>
 <li>尋找文字中的指定特徵並取代第一個為指定文字</li>
 <li><code>sub(pattern = , replacement = , x, fixed = TRUE)</code></li>
@@ -12366,7 +12542,7 @@ a_sentence <span class="o">&lt;-</span> <span class="kt">c</span><span class="p"
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># sub(pattern = , replacement = , x, fixed = TRUE)</span>
@@ -12413,7 +12589,7 @@ a_sentence <span class="o">&lt;-</span> <span class="s">&quot;Smelly cat, smelly
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># gsub(pattern = , replacement = , x, fixed = TRUE)</span>
