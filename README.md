@@ -1,37 +1,24 @@
-## Welcome to GitHub Pages
+## R 語言與網站爬蟲
 
-You can use the [editor on GitHub](https://github.com/yaojenkuo/r-crawler/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### 簡介
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+這是[郭耀仁](https://www.facebook.com/yaojen.kuo.1)在[台灣大學資訊工程學系資訊系統訓練班](https://www.csie.ntu.edu.tw/train/)所開設的 R 語言與網站爬蟲課程網頁，課程時數 10 小時。
 
-### Markdown
+### 評分標準
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- 50% 出席率
+- 50% 隨堂練習或作業
 
-```markdown
-Syntax highlighted code block
+### 課程大綱
 
-# Header 1
-## Header 2
-### Header 3
+- [關於這門課](http://yaojenkuo.io/r-crawler/chapter00.slides.html)
+- [R 語言的文字函數](http://yaojenkuo.io/r-crawler/chapter01.slides.html)
+- [正規表達式](http://yaojenkuo.io/r-crawler/chapter02.slides.html)
 
-- Bulleted
-- List
+### 近期上課錄影
 
-1. Numbered
-2. List
+- [282 期]()
 
-**Bold** and _Italic_ and `Code` text
+### 推薦學習資源/書籍
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/yaojenkuo/r-crawler/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+- [輕鬆學習 R 語言](https://www.learn-r-the-easy-way.tw/)
