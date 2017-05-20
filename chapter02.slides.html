@@ -11867,7 +11867,7 @@ a.anchor-link {
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>a_sentence <span class="o">&lt;-</span> <span class="s">&quot;Monica has 11 categories of towels.&quot;</span>
 <span class="c1"># 如果以我們前一章的做法會是</span>
-<span class="kp">gregexpr</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;11&quot;</span><span class="p">,</span> a_sentence<span class="p">,</span> fixed <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+<span class="kp">gregexpr</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;11&quot;</span><span class="p">,</span> a_sentence<span class="p">)</span>
 </pre></div>
 
 </div>
@@ -11905,7 +11905,6 @@ a.anchor-link {
 </pre></div>
 <ul>
 <li>很明顯我們需要一個可以更廣泛表達<strong>整數</strong>特徵的方法</li>
-<li>解開 <code>fixed = TRUE</code> 的封印，改採正規表達式</li>
 </ul>
 
 </div>
