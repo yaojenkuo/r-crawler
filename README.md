@@ -14,6 +14,12 @@
 - [關於這門課](http://yaojenkuo.io/r-crawler/chapter00.slides.html)
 - [R 語言的文字函數](http://yaojenkuo.io/r-crawler/chapter01.slides.html)
 - [正規表達式](http://yaojenkuo.io/r-crawler/chapter02.slides.html)
+- [認識 JSON 與 XML](http://yaojenkuo.io/r-crawler/chapter03.slides.html)
+- [認識 HTML 與 CSS]()
+- [`readLines() 函數`]()
+- [`rvest` 套件]()
+- [CSS 與 Xpath 選擇]()
+- [`rvest` 套件（2）]()
 
 ### 近期上課錄影
 
