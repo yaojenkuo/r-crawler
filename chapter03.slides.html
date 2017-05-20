@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>chapter02 slides</title>
+<title>chapter03 slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11830,7 +11830,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#27491;&#35215;&#34920;&#36948;&#24335;&#65288;Regular-Expression&#65289;">&#27491;&#35215;&#34920;&#36948;&#24335;&#65288;Regular Expression&#65289;<a class="anchor-link" href="#&#27491;&#35215;&#34920;&#36948;&#24335;&#65288;Regular-Expression&#65289;">&#182;</a></h1><h2 id="&#37101;&#32768;&#20161;">&#37101;&#32768;&#20161;<a class="anchor-link" href="#&#37101;&#32768;&#20161;">&#182;</a></h2>
+<h1 id="&#35469;&#35672;-JSON-&#33287;-XML">&#35469;&#35672; JSON &#33287; XML<a class="anchor-link" href="#&#35469;&#35672;-JSON-&#33287;-XML">&#182;</a></h1><h2 id="&#37101;&#32768;&#20161;">&#37101;&#32768;&#20161;<a class="anchor-link" href="#&#37101;&#32768;&#20161;">&#182;</a></h2>
 </div>
 </div>
 </div></section></section><section><section>
@@ -11839,11 +11839,17 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#27491;&#35215;&#34920;&#36948;&#24335;&#26159;&#20160;&#40636;&#65311;">&#27491;&#35215;&#34920;&#36948;&#24335;&#26159;&#20160;&#40636;&#65311;<a class="anchor-link" href="#&#27491;&#35215;&#34920;&#36948;&#24335;&#26159;&#20160;&#40636;&#65311;">&#182;</a></h2><ul>
-<li>正規表達式是<strong>絕大多數</strong>程式語言用來處理文字的利器</li>
-<li>用來對照符合某個特徵的文字</li>
-<li>強化我們使用 R 語言的文字函數的能力！</li>
+<h2 id="&#35469;&#35672;-JSON">&#35469;&#35672; JSON<a class="anchor-link" href="#&#35469;&#35672;-JSON">&#182;</a></h2><ul>
+<li>什麼是 JSON(JavaScript Object Notation)？</li>
+<li>這是一個 JSON：</li>
 </ul>
+<div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">friends</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;genre&quot;</span><span class="o">:</span> <span class="s2">&quot;Sitcom&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;seasons&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+  <span class="s2">&quot;episodes&quot;</span><span class="o">:</span> <span class="mi">236</span><span class="p">,</span>
+  <span class="s2">&quot;stars&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;Jennifer Aniston&quot;</span><span class="p">,</span> <span class="s2">&quot;Courteney Cox&quot;</span><span class="p">,</span> <span class="s2">&quot;Lisa Kudrow&quot;</span><span class="p">,</span> <span class="s2">&quot;Matt LeBlanc&quot;</span><span class="p">,</span> <span class="s2">&quot;Matthew Perry&quot;</span><span class="p">,</span> <span class="s2">&quot;David Schwimmer&quot;</span><span class="p">]</span>
+<span class="p">};</span>
+</pre></div>
 
 </div>
 </div>
@@ -11853,8 +11859,33 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#27491;&#35215;&#34920;&#36948;&#24335;&#26159;&#20160;&#40636;&#65311;&#65288;2&#65289;">&#27491;&#35215;&#34920;&#36948;&#24335;&#26159;&#20160;&#40636;&#65311;&#65288;2&#65289;<a class="anchor-link" href="#&#27491;&#35215;&#34920;&#36948;&#24335;&#26159;&#20160;&#40636;&#65311;&#65288;2&#65289;">&#182;</a></h2><ul>
-<li>假設我現在有一個需求是要辨識一個句子中有沒有整數：</li>
+<h2 id="&#35469;&#35672;-JSON&#65288;2&#65289;">&#35469;&#35672; JSON&#65288;2&#65289;<a class="anchor-link" href="#&#35469;&#35672;-JSON&#65288;2&#65289;">&#182;</a></h2><ul>
+<li>本來應當是用 JavaScript 解析 JSON：</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">friends</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;genre&quot;</span><span class="o">:</span> <span class="s2">&quot;Sitcom&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;seasons&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="s2">&quot;episodes&quot;</span><span class="o">:</span> <span class="mi">236</span><span class="p">,</span>
+    <span class="s2">&quot;stars&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;Jennifer Aniston&quot;</span><span class="p">,</span> <span class="s2">&quot;Courteney Cox&quot;</span><span class="p">,</span> <span class="s2">&quot;Lisa Kudrow&quot;</span><span class="p">,</span> <span class="s2">&quot;Matt LeBlanc&quot;</span><span class="p">,</span> <span class="s2">&quot;Matthew Perry&quot;</span><span class="p">,</span> <span class="s2">&quot;David Schwimmer&quot;</span><span class="p">]</span>
+<span class="p">};</span>
+
+<span class="c1">// 印出我們想知道的資訊</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;六人行共有幾季：&quot;</span> <span class="o">+</span> <span class="nx">friends</span><span class="p">[</span><span class="s2">&quot;seasons&quot;</span><span class="p">]);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;六人行共有幾集：&quot;</span> <span class="o">+</span> <span class="nx">friends</span><span class="p">[</span><span class="s2">&quot;episodes&quot;</span><span class="p">]);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;誰飾演 Chandler Bing：&quot;</span> <span class="o">+</span> <span class="nx">friends</span><span class="p">[</span><span class="s2">&quot;stars&quot;</span><span class="p">][</span><span class="mi">4</span><span class="p">]);</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#35469;&#35672;-JSON&#65288;3&#65289;">&#35469;&#35672; JSON&#65288;3&#65289;<a class="anchor-link" href="#&#35469;&#35672;-JSON&#65288;3&#65289;">&#182;</a></h2><ul>
+<li>在 R 語言中可以透過 <code>jsonlite</code> 套件所提供的 <code>fromJSON()</code> 函數讀取 JSON</li>
+<li>讀取結果是清單（list）</li>
 </ul>
 
 </div>
@@ -11865,9 +11896,19 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>a_sentence <span class="o">&lt;-</span> <span class="s">&quot;Monica has 11 categories of towels.&quot;</span>
-<span class="c1"># 如果以我們前一章的做法會是</span>
-<span class="kp">gregexpr</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;11&quot;</span><span class="p">,</span> a_sentence<span class="p">,</span> fixed <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># install.packages(&quot;jsonlite&quot;)</span>
+<span class="kn">library</span><span class="p">(</span>jsonlite<span class="p">)</span>
+
+friends <span class="o">&lt;-</span> <span class="s">&#39;{</span>
+<span class="s">  &quot;genre&quot;: &quot;Sitcom&quot;,</span>
+<span class="s">  &quot;seasons&quot;: 10,</span>
+<span class="s">  &quot;episodes&quot;: 236,</span>
+<span class="s">  &quot;stars&quot;: [&quot;Jennifer Aniston&quot;, &quot;Courteney Cox&quot;, &quot;Lisa Kudrow&quot;, &quot;Matt LeBlanc&quot;, &quot;Matthew Perry&quot;, &quot;David Schwimmer&quot;]</span>
+<span class="s">}&#39;</span>
+friends_list <span class="o">&lt;-</span> fromJSON<span class="p">(</span>friends<span class="p">)</span>
+<span class="kp">paste</span><span class="p">(</span><span class="s">&quot;六人行共有幾季：&quot;</span><span class="p">,</span> friends_list<span class="o">$</span>seasons<span class="p">)</span>
+<span class="kp">paste</span><span class="p">(</span><span class="s">&quot;六人行共有幾集：&quot;</span><span class="p">,</span> friends_list<span class="o">$</span>episodes<span class="p">)</span>
+<span class="kp">paste</span><span class="p">(</span><span class="s">&quot;誰飾演 Chandler Bing：&quot;</span><span class="p">,</span> friends_list<span class="o">$</span>stars<span class="p">[</span><span class="m">5</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -11881,10 +11922,23 @@ a.anchor-link {
 <div class="output_area"><div class="prompt"></div>
 
 <div class="output_html rendered_html output_subarea ">
-<ol>
-	<li>12</li>
-</ol>
+'六人行共有幾季： 10'
+</div>
 
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+'六人行共有幾集： 236'
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+'誰飾演 Chandler Bing： Matthew Perry'
 </div>
 
 </div>
@@ -11898,14 +11952,9 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#27491;&#35215;&#34920;&#36948;&#24335;&#26159;&#20160;&#40636;&#65311;&#65288;3&#65289;">&#27491;&#35215;&#34920;&#36948;&#24335;&#26159;&#20160;&#40636;&#65311;&#65288;3&#65289;<a class="anchor-link" href="#&#27491;&#35215;&#34920;&#36948;&#24335;&#26159;&#20160;&#40636;&#65311;&#65288;3&#65289;">&#182;</a></h2><ul>
-<li>如果句子變成這樣怎麼辦？</li>
-</ul>
-<div class="highlight"><pre><span></span>a_sentence <span class="o">&lt;-</span> <span class="s">&quot;Monica has 11 or 13, maybe 15 categories of towels?&quot;</span>
-</pre></div>
-<ul>
-<li>很明顯我們需要一個可以更廣泛表達<strong>整數</strong>特徵的方法</li>
-<li>解開 <code>fixed = TRUE</code> 的封印，改採正規表達式</li>
+<h2 id="&#32244;&#32722;">&#32244;&#32722;<a class="anchor-link" href="#&#32244;&#32722;">&#182;</a></h2><ul>
+<li>芝加哥公牛隊 1995-96 年球季的勝率（勝場數/總場數）為？</li>
+<li>從先發五人選出你最喜歡的球員</li>
 </ul>
 
 </div>
@@ -11916,52 +11965,65 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>a_sentence <span class="o">&lt;-</span> <span class="s">&quot;Monica has 11 or 13, maybe 15 categories of towels?&quot;</span>
-<span class="kp">gregexpr</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;[0-9]+&quot;</span><span class="p">,</span> a_sentence<span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># install.packages(&quot;jsonlite&quot;)</span>
+<span class="kn">library</span><span class="p">(</span>jsonlite<span class="p">)</span>
+
+best_chicago_bulls <span class="o">&lt;-</span> <span class="s">&#39;{</span>
+<span class="s">    &quot;season&quot;: &quot;1995-96&quot;,</span>
+<span class="s">    &quot;wins&quot;: 72,</span>
+<span class="s">    &quot;losses&quot;: 10,</span>
+<span class="s">    &quot;head_coach&quot;: &quot;Phil Jackson&quot;,</span>
+<span class="s">    &quot;starting_five&quot;: [&quot;Scottie Pippen&quot;, &quot;Dennis Rodman&quot;, &quot;Luc Longley&quot;, &quot;Ron Harper&quot;, &quot;Michael Jordan&quot;]</span>
+<span class="s">}&#39;</span>
+
+<span class="c1"># 這裡寫你的答案</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-<ol>
-	<li><ol class=list-inline>
-	<li>12</li>
-	<li>18</li>
-	<li>28</li>
-</ol>
-</li>
-</ol>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section></section><section><section>
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#21738;&#20123;&#25991;&#23383;&#20989;&#25976;&#21487;&#20197;&#20351;&#29992;&#27491;&#35215;&#34920;&#36948;&#24335;&#65311;">&#21738;&#20123;&#25991;&#23383;&#20989;&#25976;&#21487;&#20197;&#20351;&#29992;&#27491;&#35215;&#34920;&#36948;&#24335;&#65311;<a class="anchor-link" href="#&#21738;&#20123;&#25991;&#23383;&#20989;&#25976;&#21487;&#20197;&#20351;&#29992;&#27491;&#35215;&#34920;&#36948;&#24335;&#65311;">&#182;</a></h2><ul>
-<li><code>strsplit()</code></li>
-<li><code>regexpr()</code></li>
-<li><code>gregexpr()</code></li>
-<li><code>grep()</code></li>
-<li><code>grepl()</code></li>
-<li><code>sub()</code></li>
-<li><code>gsub()</code></li>
+<h2 id="&#35469;&#35672;-JSON&#65288;4&#65289;">&#35469;&#35672; JSON&#65288;4&#65289;<a class="anchor-link" href="#&#35469;&#35672;-JSON&#65288;4&#65289;">&#182;</a></h2><ul>
+<li>Array of JSON</li>
 </ul>
+<div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">friends_starring</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;character&quot;</span><span class="o">:</span> <span class="s2">&quot;Rachel Green&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;star&quot;</span><span class="o">:</span> <span class="s2">&quot;Jennifer Aniston&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;character&quot;</span><span class="o">:</span> <span class="s2">&quot;Monica Geller&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;star&quot;</span><span class="o">:</span> <span class="s2">&quot;Courteney Cox&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;character&quot;</span><span class="o">:</span> <span class="s2">&quot;Phoebe Buffay&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;star&quot;</span><span class="o">:</span> <span class="s2">&quot;Lisa Kudrow&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;character&quot;</span><span class="o">:</span> <span class="s2">&quot;Joey Tribbiani&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;star&quot;</span><span class="o">:</span> <span class="s2">&quot;Matt LeBlanc&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;character&quot;</span><span class="o">:</span> <span class="s2">&quot;Chandler Bing&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;star&quot;</span><span class="o">:</span> <span class="s2">&quot;Matthew Perry&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;character&quot;</span><span class="o">:</span> <span class="s2">&quot;Ross Geller&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;star&quot;</span><span class="o">:</span> <span class="s2">&quot;David Schwimmer&quot;</span>
+    <span class="p">}</span>
+<span class="p">];</span>
+
+<span class="c1">// 印出我們想知道的資訊</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">friends_starring</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;誰飾演 &quot;</span> <span class="o">+</span> <span class="nx">friends_starring</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="s2">&quot;character&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;：&quot;</span> <span class="o">+</span> <span class="nx">friends_starring</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="s2">&quot;star&quot;</span><span class="p">]);</span>
+<span class="p">};</span>
+</pre></div>
 
 </div>
 </div>
@@ -11971,8 +12033,8 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#21738;&#20123;&#25991;&#23383;&#20989;&#25976;&#21487;&#20197;&#20351;&#29992;&#27491;&#35215;&#34920;&#36948;&#24335;&#65311;&#65288;2&#65289;">&#21738;&#20123;&#25991;&#23383;&#20989;&#25976;&#21487;&#20197;&#20351;&#29992;&#27491;&#35215;&#34920;&#36948;&#24335;&#65311;&#65288;2&#65289;<a class="anchor-link" href="#&#21738;&#20123;&#25991;&#23383;&#20989;&#25976;&#21487;&#20197;&#20351;&#29992;&#27491;&#35215;&#34920;&#36948;&#24335;&#65311;&#65288;2&#65289;">&#182;</a></h2><ul>
-<li><code>strsplit()</code></li>
+<h2 id="&#35469;&#35672;-JSON&#65288;5&#65289;">&#35469;&#35672; JSON&#65288;5&#65289;<a class="anchor-link" href="#&#35469;&#35672;-JSON&#65288;5&#65289;">&#182;</a></h2><ul>
+<li>讀取結果是資料框（data.frame）</li>
 </ul>
 
 </div>
@@ -11983,1251 +12045,40 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>a_sentence <span class="o">&lt;-</span> <span class="s">&quot;Joey: This guy says hello, I wanna kill myself.&quot;</span>
-<span class="c1"># 斷詞</span>
-<span class="kp">strsplit</span><span class="p">(</span>a_sentence<span class="p">,</span> split <span class="o">=</span> <span class="s">&quot;[: ,.]+&quot;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-<ol>
-	<li><ol class=list-inline>
-	<li>'Joey'</li>
-	<li>'This'</li>
-	<li>'guy'</li>
-	<li>'says'</li>
-	<li>'hello'</li>
-	<li>'I'</li>
-	<li>'wanna'</li>
-	<li>'kill'</li>
-	<li>'myself'</li>
-</ol>
-</li>
-</ol>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#21738;&#20123;&#25991;&#23383;&#20989;&#25976;&#21487;&#20197;&#20351;&#29992;&#27491;&#35215;&#34920;&#36948;&#24335;&#65311;&#65288;3&#65289;">&#21738;&#20123;&#25991;&#23383;&#20989;&#25976;&#21487;&#20197;&#20351;&#29992;&#27491;&#35215;&#34920;&#36948;&#24335;&#65311;&#65288;3&#65289;<a class="anchor-link" href="#&#21738;&#20123;&#25991;&#23383;&#20989;&#25976;&#21487;&#20197;&#20351;&#29992;&#27491;&#35215;&#34920;&#36948;&#24335;&#65311;&#65288;3&#65289;">&#182;</a></h2><ul>
-<li><code>regexpr()</code> 與 <code>gregexpr()</code></li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>a_sentence <span class="o">&lt;-</span> <span class="s">&quot;Monica has 11 or 13, maybe 15 categories of towels?&quot;</span>
-<span class="c1"># 找尋第一個數字</span>
-<span class="c1"># 找尋所有的數字</span>
-<span class="kp">regexpr</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;[0-9]+&quot;</span><span class="p">,</span> a_sentence<span class="p">)</span>
-<span class="kp">gregexpr</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;[0-9]+&quot;</span><span class="p">,</span> a_sentence<span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-12
-</div>
-
-</div>
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-<ol>
-	<li><ol class=list-inline>
-	<li>12</li>
-	<li>18</li>
-	<li>28</li>
-</ol>
-</li>
-</ol>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#21738;&#20123;&#25991;&#23383;&#20989;&#25976;&#21487;&#20197;&#20351;&#29992;&#27491;&#35215;&#34920;&#36948;&#24335;&#65311;&#65288;4&#65289;">&#21738;&#20123;&#25991;&#23383;&#20989;&#25976;&#21487;&#20197;&#20351;&#29992;&#27491;&#35215;&#34920;&#36948;&#24335;&#65311;&#65288;4&#65289;<a class="anchor-link" href="#&#21738;&#20123;&#25991;&#23383;&#20989;&#25976;&#21487;&#20197;&#20351;&#29992;&#27491;&#35215;&#34920;&#36948;&#24335;&#65311;&#65288;4&#65289;">&#182;</a></h2><ul>
-<li><code>grep()</code> 與 <code>grepl()</code></li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>a_sentence <span class="o">&lt;-</span> <span class="s">&quot;Monica has 11 or 13, maybe 15 categories of towels?&quot;</span>
-word_vector <span class="o">&lt;-</span> <span class="kp">unlist</span><span class="p">(</span><span class="kp">strsplit</span><span class="p">(</span>a_sentence<span class="p">,</span> split <span class="o">=</span> <span class="s">&quot;[: ,.?]+&quot;</span><span class="p">))</span>
-<span class="c1"># 找尋數字</span>
-<span class="c1"># 判斷是否有數字</span>
-word_vector
-<span class="kp">grep</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;[0-9]+&quot;</span><span class="p">,</span> word_vector<span class="p">)</span>
-<span class="kp">grepl</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;[0-9]+&quot;</span><span class="p">,</span> word_vector<span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-<ol class=list-inline>
-	<li>'Monica'</li>
-	<li>'has'</li>
-	<li>'11'</li>
-	<li>'or'</li>
-	<li>'13'</li>
-	<li>'maybe'</li>
-	<li>'15'</li>
-	<li>'categories'</li>
-	<li>'of'</li>
-	<li>'towels'</li>
-</ol>
-
-</div>
-
-</div>
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-<ol class=list-inline>
-	<li>3</li>
-	<li>5</li>
-	<li>7</li>
-</ol>
-
-</div>
-
-</div>
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-<ol class=list-inline>
-	<li>FALSE</li>
-	<li>FALSE</li>
-	<li>TRUE</li>
-	<li>FALSE</li>
-	<li>TRUE</li>
-	<li>FALSE</li>
-	<li>TRUE</li>
-	<li>FALSE</li>
-	<li>FALSE</li>
-	<li>FALSE</li>
-</ol>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#21738;&#20123;&#25991;&#23383;&#20989;&#25976;&#21487;&#20197;&#20351;&#29992;&#27491;&#35215;&#34920;&#36948;&#24335;&#65311;&#65288;5&#65289;">&#21738;&#20123;&#25991;&#23383;&#20989;&#25976;&#21487;&#20197;&#20351;&#29992;&#27491;&#35215;&#34920;&#36948;&#24335;&#65311;&#65288;5&#65289;<a class="anchor-link" href="#&#21738;&#20123;&#25991;&#23383;&#20989;&#25976;&#21487;&#20197;&#20351;&#29992;&#27491;&#35215;&#34920;&#36948;&#24335;&#65311;&#65288;5&#65289;">&#182;</a></h2><ul>
-<li><code>sub()</code> 與 <code>gsub()</code></li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>a_sentence <span class="o">&lt;-</span> <span class="s">&quot;Monica has 11 or 13, maybe 15 categories of towels?&quot;</span>
-<span class="c1"># 取代第一個數字為 X</span>
-<span class="c1"># 取代所有數字為 X</span>
-<span class="kp">sub</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;[0-9]+&quot;</span><span class="p">,</span> a_sentence<span class="p">,</span> replacement <span class="o">=</span> <span class="s">&quot;X&quot;</span><span class="p">)</span>
-<span class="kp">gsub</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;[0-9]+&quot;</span><span class="p">,</span> a_sentence<span class="p">,</span> replacement <span class="o">=</span> <span class="s">&quot;X&quot;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-'Monica has X or 13, maybe 15 categories of towels?'
-</div>
-
-</div>
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-'Monica has X or X, maybe X categories of towels?'
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#24120;&#29992;&#30340;&#27491;&#35215;&#34920;&#36948;&#24335;&#31684;&#20363;">&#24120;&#29992;&#30340;&#27491;&#35215;&#34920;&#36948;&#24335;&#31684;&#20363;<a class="anchor-link" href="#&#24120;&#29992;&#30340;&#27491;&#35215;&#34920;&#36948;&#24335;&#31684;&#20363;">&#182;</a></h2><table>
-<thead><tr>
-<th>特徵</th>
-<th>正規表達式寫法</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>整數</td>
-<td><code>[0-9]+</code> 或 <code>[\d]</code></td>
-</tr>
-<tr>
-<td>浮點數</td>
-<td><code>[0-9]+\\.[0-9]+</code> 或 <code>[\d]+\\.[\d]+</code></td>
-</tr>
-<tr>
-<td>英文</td>
-<td><code>[A-Za-z]+</code></td>
-</tr>
-<tr>
-<td>電子郵件信箱</td>
-<td><code>[a-zA-Z0-9_]+@[a-zA-Z0-9\\._]+</code></td>
-</tr>
-<tr>
-<td>網址</td>
-<td>http(s)?://[a-zA-Z0-9\\./_]+</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#24120;&#29992;&#30340;&#27491;&#35215;&#34920;&#36948;&#24335;&#31684;&#20363;&#65288;2&#65289;">&#24120;&#29992;&#30340;&#27491;&#35215;&#34920;&#36948;&#24335;&#31684;&#20363;&#65288;2&#65289;<a class="anchor-link" href="#&#24120;&#29992;&#30340;&#27491;&#35215;&#34920;&#36948;&#24335;&#31684;&#20363;&#65288;2&#65289;">&#182;</a></h2><ul>
-<li>判斷浮點數</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>a_sentence <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;半程馬拉松是 21 公里&quot;</span><span class="p">,</span> <span class="s">&quot;全程馬拉松是 42.195 公里&quot;</span><span class="p">)</span>
-<span class="c1"># 判斷有無浮點數</span>
-<span class="kp">grepl</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;[0-9]+\\.[0-9]+&quot;</span><span class="p">,</span> a_sentence<span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-<ol class=list-inline>
-	<li>FALSE</li>
-	<li>TRUE</li>
-</ol>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#24120;&#29992;&#30340;&#27491;&#35215;&#34920;&#36948;&#24335;&#31684;&#20363;&#65288;3&#65289;">&#24120;&#29992;&#30340;&#27491;&#35215;&#34920;&#36948;&#24335;&#31684;&#20363;&#65288;3&#65289;<a class="anchor-link" href="#&#24120;&#29992;&#30340;&#27491;&#35215;&#34920;&#36948;&#24335;&#31684;&#20363;&#65288;3&#65289;">&#182;</a></h2><ul>
-<li>判斷英文</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>a_sentence <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;半程馬拉松是 21 公里&quot;</span><span class="p">,</span> <span class="s">&quot;全程馬拉松是 42.195 km&quot;</span><span class="p">)</span>
-<span class="c1"># 判斷有無英文</span>
-<span class="kp">grepl</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;[A-Za-z]+&quot;</span><span class="p">,</span> a_sentence<span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-<ol class=list-inline>
-	<li>FALSE</li>
-	<li>TRUE</li>
-</ol>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#24120;&#29992;&#30340;&#27491;&#35215;&#34920;&#36948;&#24335;&#31684;&#20363;&#65288;4&#65289;">&#24120;&#29992;&#30340;&#27491;&#35215;&#34920;&#36948;&#24335;&#31684;&#20363;&#65288;4&#65289;<a class="anchor-link" href="#&#24120;&#29992;&#30340;&#27491;&#35215;&#34920;&#36948;&#24335;&#31684;&#20363;&#65288;4&#65289;">&#182;</a></h2><ul>
-<li>判斷電子郵件信箱</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>word_vector <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;Chandler Bing&quot;</span><span class="p">,</span> <span class="s">&quot;cb@friends.com&quot;</span><span class="p">)</span>
-<span class="c1"># 判斷有無電子郵件信箱</span>
-<span class="kp">grepl</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;[a-zA-Z0-9_]+@[a-zA-Z0-9\\._]+&quot;</span><span class="p">,</span> word_vector<span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-<ol class=list-inline>
-	<li>FALSE</li>
-	<li>TRUE</li>
-</ol>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#24120;&#29992;&#30340;&#27491;&#35215;&#34920;&#36948;&#24335;&#31684;&#20363;&#65288;5&#65289;">&#24120;&#29992;&#30340;&#27491;&#35215;&#34920;&#36948;&#24335;&#31684;&#20363;&#65288;5&#65289;<a class="anchor-link" href="#&#24120;&#29992;&#30340;&#27491;&#35215;&#34920;&#36948;&#24335;&#31684;&#20363;&#65288;5&#65289;">&#182;</a></h2><ul>
-<li>判斷網址</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>word_vector <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;https://chandler.com&quot;</span><span class="p">,</span> <span class="s">&quot;cb@friends.com&quot;</span><span class="p">)</span>
-<span class="c1"># 判斷有無網址</span>
-<span class="kp">grepl</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;http(s)?://[a-zA-Z0-9\\./_]+&quot;</span><span class="p">,</span> word_vector<span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-<ol class=list-inline>
-	<li>TRUE</li>
-	<li>FALSE</li>
-</ol>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#32244;&#32722;">&#32244;&#32722;<a class="anchor-link" href="#&#32244;&#32722;">&#182;</a></h2><ul>
-<li>判斷這個向量有幾個浮點數</li>
-</ul>
-<div class="highlight"><pre><span></span>distances <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;0.4&quot;</span><span class="p">,</span> <span class="s">&quot;1&quot;</span><span class="p">,</span> <span class="s">&quot;3&quot;</span><span class="p">,</span> <span class="s">&quot;5&quot;</span><span class="p">,</span> <span class="s">&quot;10&quot;</span><span class="p">,</span> <span class="s">&quot;21&quot;</span><span class="p">,</span> <span class="s">&quot;42.195&quot;</span><span class="p">)</span>
-float_judge <span class="o">&lt;-</span> <span class="kp">grepl</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;____&quot;</span><span class="p">,</span> ____<span class="p">)</span>
-<span class="kp">sum</span><span class="p">(</span>float_judge<span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#32244;&#32722;">&#32244;&#32722;<a class="anchor-link" href="#&#32244;&#32722;">&#182;</a></h2><ul>
-<li>判斷這個向量有幾個元素包含英文</li>
-</ul>
-<div class="highlight"><pre><span></span>sentences <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;我喜歡 6 人行&quot;</span><span class="p">,</span> <span class="s">&quot;I love Friends&quot;</span><span class="p">,</span> <span class="s">&quot;我最喜歡 Central Perk&quot;</span><span class="p">,</span> <span class="s">&quot;我喜歡那個咖啡館&quot;</span><span class="p">)</span>
-en_judge <span class="o">&lt;-</span> <span class="kp">grepl</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;____&quot;</span><span class="p">,</span> ____<span class="p">)</span>
-<span class="kp">sum</span><span class="p">(</span>en_judge<span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#32244;&#32722;">&#32244;&#32722;<a class="anchor-link" href="#&#32244;&#32722;">&#182;</a></h2><ul>
-<li>判斷這個向量有幾個元素包含電子郵件信箱</li>
-</ul>
-<div class="highlight"><pre><span></span>sentences <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;我喜歡 6 人行&quot;</span><span class="p">,</span> <span class="s">&quot;I love Friends&quot;</span><span class="p">,</span> <span class="s">&quot;我最喜歡 Central Perk&quot;</span><span class="p">,</span> <span class="s">&quot;我喜歡那個咖啡館&quot;</span><span class="p">,</span> <span class="s">&quot;cbing@friends.com&quot;</span><span class="p">,</span> <span class="s">&quot;pbuffay@friends.com&quot;</span><span class="p">,</span> <span class="s">&quot;www.friends.com&quot;</span><span class="p">)</span>
-email_judge <span class="o">&lt;-</span> <span class="kp">grepl</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;____&quot;</span><span class="p">,</span> ____<span class="p">)</span>
-<span class="kp">sum</span><span class="p">(</span>email_judge<span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;">&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;<a class="anchor-link" href="#&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;">&#182;</a></h2><ul>
-<li><code>.</code> 可以用來表達任何字元</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>words <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">,</span> <span class="s">&quot; &quot;</span><span class="p">,</span> <span class="s">&quot;a&quot;</span><span class="p">,</span> <span class="s">&quot;24&quot;</span><span class="p">,</span> <span class="s">&quot;@&quot;</span><span class="p">)</span>
-<span class="kp">grepl</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;.&quot;</span><span class="p">,</span> words<span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-<ol class=list-inline>
-	<li>FALSE</li>
-	<li>TRUE</li>
-	<li>TRUE</li>
-	<li>TRUE</li>
-	<li>TRUE</li>
-</ol>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;2&#65289;">&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;2&#65289;<a class="anchor-link" href="#&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;2&#65289;">&#182;</a></h2><ul>
-<li><code>\</code> 可以用來跳脫特殊字元</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>words <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;Chandler Bing&quot;</span><span class="p">,</span> <span class="s">&quot;Chandler.Bing&quot;</span><span class="p">)</span>
-<span class="c1"># 如果我真的要比對 . 這個符號呢？</span>
-<span class="kp">grepl</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;.&quot;</span><span class="p">,</span> words<span class="p">)</span>
-<span class="kp">grepl</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;\\.&quot;</span><span class="p">,</span> words<span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-<ol class=list-inline>
-	<li>TRUE</li>
-	<li>TRUE</li>
-</ol>
-
-</div>
-
-</div>
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-<ol class=list-inline>
-	<li>FALSE</li>
-	<li>TRUE</li>
-</ol>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;3&#65289;">&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;3&#65289;<a class="anchor-link" href="#&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;3&#65289;">&#182;</a></h2><ul>
-<li><code>^</code> 可以用來比對開頭文字</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>words <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;Bing&quot;</span><span class="p">,</span> <span class="s">&quot;Geller&quot;</span><span class="p">,</span> <span class="s">&quot;Green&quot;</span><span class="p">,</span> <span class="s">&quot;Buffay&quot;</span><span class="p">,</span> <span class="s">&quot;Tribbiani&quot;</span><span class="p">)</span>
-<span class="kp">grepl</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;^G&quot;</span><span class="p">,</span> words<span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-<ol class=list-inline>
-	<li>FALSE</li>
-	<li>TRUE</li>
-	<li>TRUE</li>
-	<li>FALSE</li>
-	<li>FALSE</li>
-</ol>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;4&#65289;">&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;4&#65289;<a class="anchor-link" href="#&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;4&#65289;">&#182;</a></h2><ul>
-<li><code>$</code> 可以用來比對結束文字</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>sentence <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;Monica&quot;</span><span class="p">,</span> <span class="s">&quot;darling&quot;</span><span class="p">,</span> <span class="s">&quot;it&#39;s&quot;</span><span class="p">,</span> <span class="s">&quot;Amanda&quot;</span><span class="p">,</span> <span class="s">&quot;calling&quot;</span><span class="p">)</span>
-<span class="kp">grepl</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;ing$&quot;</span><span class="p">,</span> sentence<span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-<ol class=list-inline>
-	<li>FALSE</li>
-	<li>TRUE</li>
-	<li>FALSE</li>
-	<li>FALSE</li>
-	<li>TRUE</li>
-</ol>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;5&#65289;">&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;5&#65289;<a class="anchor-link" href="#&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;5&#65289;">&#182;</a></h2><ul>
-<li><code>*</code> 可以用來比對出現零次或多次的文字</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>words <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;friends&quot;</span><span class="p">,</span> <span class="s">&quot;frriends&quot;</span><span class="p">,</span> <span class="s">&quot;fantasy&quot;</span><span class="p">,</span> <span class="s">&quot;Friends&quot;</span><span class="p">)</span>
-<span class="kp">grepl</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;fr*&quot;</span><span class="p">,</span> words<span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-<ol class=list-inline>
-	<li>TRUE</li>
-	<li>TRUE</li>
-	<li>TRUE</li>
-	<li>FALSE</li>
-</ol>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;6&#65289;">&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;6&#65289;<a class="anchor-link" href="#&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;6&#65289;">&#182;</a></h2><ul>
-<li><code>+</code> 可以用來比對出現一次或多次的文字</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>words <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;friends&quot;</span><span class="p">,</span> <span class="s">&quot;frriends&quot;</span><span class="p">,</span> <span class="s">&quot;fantasy&quot;</span><span class="p">,</span> <span class="s">&quot;Friends&quot;</span><span class="p">)</span>
-<span class="kp">grepl</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;fr+&quot;</span><span class="p">,</span> words<span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-<ol class=list-inline>
-	<li>TRUE</li>
-	<li>TRUE</li>
-	<li>FALSE</li>
-	<li>FALSE</li>
-</ol>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;7&#65289;">&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;7&#65289;<a class="anchor-link" href="#&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;7&#65289;">&#182;</a></h2><ul>
-<li><code>?</code> 可以用來比對出現零次或一次的文字</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>words <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;friends&quot;</span><span class="p">,</span> <span class="s">&quot;fantasy&quot;</span><span class="p">)</span>
-<span class="kp">grepl</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;fr?&quot;</span><span class="p">,</span> words<span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-<ol class=list-inline>
-	<li>TRUE</li>
-	<li>TRUE</li>
-</ol>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;8&#65289;">&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;8&#65289;<a class="anchor-link" href="#&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;8&#65289;">&#182;</a></h2><ul>
-<li><code>{}</code> 可以用來比對文字出現的次數</li>
-<li><code>x{3}</code> 剛好三個 <code>x</code></li>
-<li><code>x{1,3}</code> 一到三個 <code>x</code></li>
-<li><code>x{1,}</code> 至少一個 <code>x</code></li>
-<li><code>x{,3}</code> 最多三個 <code>x</code></li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>words <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;y&quot;</span><span class="p">,</span> <span class="s">&quot;x&quot;</span><span class="p">,</span> <span class="s">&quot;xx&quot;</span><span class="p">,</span> <span class="s">&quot;xxx&quot;</span><span class="p">)</span>
-<span class="kp">grepl</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;x{3}&quot;</span><span class="p">,</span> words<span class="p">)</span>
-<span class="kp">grepl</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;x{1,3}&quot;</span><span class="p">,</span> words<span class="p">)</span>
-<span class="kp">grepl</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;x{1,}&quot;</span><span class="p">,</span> words<span class="p">)</span>
-<span class="kp">grepl</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;x{,3}&quot;</span><span class="p">,</span> words<span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-<ol class=list-inline>
-	<li>FALSE</li>
-	<li>FALSE</li>
-	<li>FALSE</li>
-	<li>TRUE</li>
-</ol>
-
-</div>
-
-</div>
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-<ol class=list-inline>
-	<li>FALSE</li>
-	<li>TRUE</li>
-	<li>TRUE</li>
-	<li>TRUE</li>
-</ol>
-
-</div>
-
-</div>
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-<ol class=list-inline>
-	<li>FALSE</li>
-	<li>TRUE</li>
-	<li>TRUE</li>
-	<li>TRUE</li>
-</ol>
-
-</div>
-
-</div>
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-<ol class=list-inline>
-	<li>TRUE</li>
-	<li>TRUE</li>
-	<li>TRUE</li>
-	<li>TRUE</li>
-</ol>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;9&#65289;">&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;9&#65289;<a class="anchor-link" href="#&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;9&#65289;">&#182;</a></h2><ul>
-<li><code>[]</code> 可以用來比對是否包含某些文字</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>sentences <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;我喜歡 6 人行&quot;</span><span class="p">,</span> <span class="s">&quot;I love Friends&quot;</span><span class="p">,</span> <span class="s">&quot;我最喜歡 CENTRAL PERK&quot;</span><span class="p">,</span> <span class="s">&quot;我喜歡那個咖啡館&quot;</span><span class="p">)</span>
-<span class="kp">grepl</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;[0-9]&quot;</span><span class="p">,</span> sentences<span class="p">)</span> <span class="c1"># 是否含數字</span>
-<span class="kp">grepl</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;[0-9a-z]&quot;</span><span class="p">,</span> sentences<span class="p">)</span> <span class="c1"># 是否含數字與小寫英文</span>
-<span class="kp">grepl</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;[0-9a-zA-Z]&quot;</span><span class="p">,</span> sentences<span class="p">)</span> <span class="c1"># 是否含數字與英文</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-<ol class=list-inline>
-	<li>TRUE</li>
-	<li>FALSE</li>
-	<li>FALSE</li>
-	<li>FALSE</li>
-</ol>
-
-</div>
-
-</div>
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-<ol class=list-inline>
-	<li>TRUE</li>
-	<li>TRUE</li>
-	<li>FALSE</li>
-	<li>FALSE</li>
-</ol>
-
-</div>
-
-</div>
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-<ol class=list-inline>
-	<li>TRUE</li>
-	<li>TRUE</li>
-	<li>TRUE</li>
-	<li>FALSE</li>
-</ol>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;10&#65289;">&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;10&#65289;<a class="anchor-link" href="#&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;10&#65289;">&#182;</a></h2><ul>
-<li><code>[^]</code> 可以用來比對是否不包含某些文字</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>words <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;10&quot;</span><span class="p">,</span> <span class="s">&quot;Friends&quot;</span><span class="p">,</span> <span class="s">&quot;六人行&quot;</span><span class="p">)</span>
-<span class="kp">grepl</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;[^0-9]&quot;</span><span class="p">,</span> words<span class="p">)</span> <span class="c1"># 非數字</span>
-<span class="kp">grepl</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;[^0-9A-Za-z]&quot;</span><span class="p">,</span> words<span class="p">)</span> <span class="c1"># 非數字與非英文</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-<ol class=list-inline>
-	<li>FALSE</li>
-	<li>TRUE</li>
-	<li>TRUE</li>
-</ol>
-
-</div>
-
-</div>
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-<ol class=list-inline>
-	<li>FALSE</li>
-	<li>FALSE</li>
-	<li>TRUE</li>
-</ol>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;11&#65289;">&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;11&#65289;<a class="anchor-link" href="#&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;11&#65289;">&#182;</a></h2><ul>
-<li><code>|</code> 可以用來比對<strong>或</strong></li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>words <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;food&quot;</span><span class="p">,</span> <span class="s">&quot;foot&quot;</span><span class="p">,</span> <span class="s">&quot;hood&quot;</span><span class="p">)</span>
-<span class="kp">grepl</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;foo(d|t)&quot;</span><span class="p">,</span> words<span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-<ol class=list-inline>
-	<li>TRUE</li>
-	<li>TRUE</li>
-	<li>FALSE</li>
-</ol>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;12&#65289;">&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;12&#65289;<a class="anchor-link" href="#&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;12&#65289;">&#182;</a></h2><ul>
-<li><code>\n</code> 比對換行符號</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>sentence <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;Monica darling, it&#39;s Amanda calling&quot;</span><span class="p">,</span>
-              <span class="s">&quot;Monica darling,</span>
-<span class="s">               it&#39;s Amanda calling&quot;</span><span class="p">)</span>
-<span class="kp">grepl</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;\\n&quot;</span><span class="p">,</span> sentence<span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-<ol class=list-inline>
-	<li>FALSE</li>
-	<li>TRUE</li>
-</ol>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;13&#65289;">&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;13&#65289;<a class="anchor-link" href="#&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;13&#65289;">&#182;</a></h2><ul>
-<li><code>\s</code> 比對空白</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>sentence <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;IloveFriends&quot;</span><span class="p">,</span> <span class="s">&quot;I love Friends&quot;</span><span class="p">)</span>
-<span class="kp">grepl</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;\\s&quot;</span><span class="p">,</span> sentence<span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-<ol class=list-inline>
-	<li>FALSE</li>
-	<li>TRUE</li>
-</ol>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;14&#65289;">&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;14&#65289;<a class="anchor-link" href="#&#27491;&#35215;&#34920;&#36948;&#24335;&#30340;&#29305;&#27530;&#23383;&#20803;&#65288;14&#65289;">&#182;</a></h2><ul>
-<li><code>\t</code> 比對 Tab</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>sentence <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;I love Friends&quot;</span><span class="p">,</span> <span class="s">&quot;I\tlove\tFriends&quot;</span><span class="p">)</span>
-<span class="kp">writeLines</span><span class="p">(</span>sentence<span class="p">)</span>
-<span class="kp">grepl</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;\\t&quot;</span><span class="p">,</span> sentence<span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># install.packages(&quot;jsonlite&quot;)</span>
+<span class="c1"># library(jsonlite)</span>
+
+friends_starring <span class="o">&lt;-</span> <span class="s">&#39;[</span>
+<span class="s">    {</span>
+<span class="s">		&quot;character&quot;: &quot;Rachel Green&quot;,</span>
+<span class="s">		&quot;star&quot;: &quot;Jennifer Aniston&quot;</span>
+<span class="s">	},</span>
+<span class="s">	{</span>
+<span class="s">		&quot;character&quot;: &quot;Monica Geller&quot;,</span>
+<span class="s">		&quot;star&quot;: &quot;Courteney Cox&quot;</span>
+<span class="s">	},</span>
+<span class="s">	{</span>
+<span class="s">		&quot;character&quot;: &quot;Phoebe Buffay&quot;,</span>
+<span class="s">		&quot;star&quot;: &quot;Lisa Kudrow&quot;</span>
+<span class="s">	},</span>
+<span class="s">	{</span>
+<span class="s">		&quot;character&quot;: &quot;Joey Tribbiani&quot;,</span>
+<span class="s">		&quot;star&quot;: &quot;Matt LeBlanc&quot;</span>
+<span class="s">	},</span>
+<span class="s">	{</span>
+<span class="s">		&quot;character&quot;: &quot;Chandler Bing&quot;,</span>
+<span class="s">		&quot;star&quot;: &quot;Matthew Perry&quot;</span>
+<span class="s">	},</span>
+<span class="s">	{</span>
+<span class="s">		&quot;character&quot;: &quot;Ross Geller&quot;,</span>
+<span class="s">		&quot;star&quot;: &quot;David Schwimmer&quot;</span>
+<span class="s">	}</span>
+<span class="s">]&#39;</span>
+
+fs_df <span class="o">&lt;-</span> fromJSON<span class="p">(</span>friends_starring<span class="p">)</span>
+<span class="kr">for</span> <span class="p">(</span>i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span><span class="kp">nrow</span><span class="p">(</span>fs_df<span class="p">)){</span>
+    <span class="kp">print</span><span class="p">(</span><span class="kp">paste</span><span class="p">(</span><span class="s">&quot;誰飾演&quot;</span><span class="p">,</span> fs_df<span class="p">[</span>i<span class="p">,</span> <span class="s">&quot;character&quot;</span><span class="p">],</span> <span class="s">&quot;：&quot;</span><span class="p">,</span> fs_df<span class="p">[</span>i<span class="p">,</span> <span class="s">&quot;star&quot;</span><span class="p">]))</span>
+<span class="p">}</span>
 </pre></div>
 
 </div>
@@ -13240,24 +12091,67 @@ email_judge <span class="o">&lt;-</span> <span class="kp">grepl</span><span clas
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>I love Friends
-I	love	Friends
+<pre>[1] &#34;誰飾演 Rachel Green ： Jennifer Aniston&#34;
+[1] &#34;誰飾演 Monica Geller ： Courteney Cox&#34;
+[1] &#34;誰飾演 Phoebe Buffay ： Lisa Kudrow&#34;
+[1] &#34;誰飾演 Joey Tribbiani ： Matt LeBlanc&#34;
+[1] &#34;誰飾演 Chandler Bing ： Matthew Perry&#34;
+[1] &#34;誰飾演 Ross Geller ： David Schwimmer&#34;
 </pre>
 </div>
 </div>
 
-<div class="output_area"><div class="prompt"></div>
-
-<div class="output_html rendered_html output_subarea ">
-<ol class=list-inline>
-	<li>FALSE</li>
-	<li>TRUE</li>
-</ol>
-
+</div>
 </div>
 
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#32244;&#32722;">&#32244;&#32722;<a class="anchor-link" href="#&#32244;&#32722;">&#182;</a></h2><ul>
+<li>列出芝加哥公牛隊 1995-96 年先發五人的位置與球員</li>
+</ul>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># install.packages(&quot;jsonlite&quot;)</span>
+<span class="c1"># library(jsonlite)</span>
+
+best_cb_start_five <span class="o">&lt;-</span> <span class="s">&#39;[</span>
+<span class="s">    {</span>
+<span class="s">		&quot;pos&quot;: &quot;SF&quot;,</span>
+<span class="s">		&quot;player&quot;: &quot;Scottie Pippen&quot;</span>
+<span class="s">	},</span>
+<span class="s">	{</span>
+<span class="s">		&quot;pos&quot;: &quot;PF&quot;,</span>
+<span class="s">		&quot;player&quot;: &quot;Dennis Rodman&quot;</span>
+<span class="s">	},</span>
+<span class="s">	{</span>
+<span class="s">		&quot;pos&quot;: &quot;C&quot;,</span>
+<span class="s">		&quot;player&quot;: &quot;Luc Longley&quot;</span>
+<span class="s">	},</span>
+<span class="s">	{</span>
+<span class="s">		&quot;pos&quot;: &quot;PG&quot;,</span>
+<span class="s">		&quot;player&quot;: &quot;Ron Harper&quot;</span>
+<span class="s">	},</span>
+<span class="s">	{</span>
+<span class="s">		&quot;pos&quot;: &quot;SG&quot;,</span>
+<span class="s">		&quot;player&quot;: &quot;Michael Jordan&quot;</span>
+<span class="s">	}</span>
+<span class="s">]&#39;</span>
+
+<span class="c1"># 這裡寫你的答案</span>
+</pre></div>
+
+</div>
 </div>
 </div>
 
@@ -13267,12 +12161,35 @@ I	love	Friends
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#32244;&#32722;">&#32244;&#32722;<a class="anchor-link" href="#&#32244;&#32722;">&#182;</a></h2><ul>
-<li>將數字的部分遮蔽成 <code>x</code></li>
+<h2 id="&#35469;&#35672;-XML">&#35469;&#35672; XML<a class="anchor-link" href="#&#35469;&#35672;-XML">&#182;</a></h2><ul>
+<li>什麼是 XML（Extensible Markup Language）？</li>
+<li>類似 HTML 的標籤式文件格式</li>
+<li>這是一個 XML：</li>
 </ul>
-<div class="highlight"><pre><span></span>price_list <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;apple: 1.76, orange: 2.56, banana: 0.69&quot;</span><span class="p">)</span>
-<span class="c1"># apple: x.xx, orange: x.xx, banana: x.xx</span>
-<span class="kp">gsub</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;____&quot;</span><span class="p">,</span> ____<span class="p">,</span> replacement <span class="o">=</span> <span class="s">&quot;____&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="nt">&lt;六人行&gt;</span>
+    <span class="nt">&lt;角色演員&gt;</span>
+        <span class="nt">&lt;角色&gt;</span>Rachel Green<span class="nt">&lt;/角色&gt;</span>
+        <span class="nt">&lt;演員&gt;</span>Jennifer Aniston<span class="nt">&lt;/演員&gt;</span>
+    <span class="nt">&lt;/角色演員&gt;</span>
+        <span class="nt">&lt;角色&gt;</span>Monica Geller<span class="nt">&lt;/角色&gt;</span>
+        <span class="nt">&lt;演員&gt;</span>Courteney Cox<span class="nt">&lt;/演員&gt;</span>
+    <span class="nt">&lt;角色演員&gt;</span>
+        <span class="nt">&lt;角色&gt;</span>Phoebe Buffay<span class="nt">&lt;/角色&gt;</span>
+        <span class="nt">&lt;演員&gt;</span>Lisa Kudrow<span class="nt">&lt;/演員&gt;</span>
+    <span class="nt">&lt;/角色演員&gt;</span>
+    <span class="nt">&lt;角色演員&gt;</span>
+        <span class="nt">&lt;角色&gt;</span>Joey Tribbiani<span class="nt">&lt;/角色&gt;</span>
+        <span class="nt">&lt;演員&gt;</span>Matt LeBlanc<span class="nt">&lt;/演員&gt;</span>
+    <span class="nt">&lt;/角色演員&gt;</span>
+    <span class="nt">&lt;角色演員&gt;</span>
+        <span class="nt">&lt;角色&gt;</span>Chandler Bing<span class="nt">&lt;/角色&gt;</span>
+        <span class="nt">&lt;演員&gt;</span>Matthew Perry<span class="nt">&lt;/演員&gt;</span>
+    <span class="nt">&lt;/角色演員&gt;</span>
+    <span class="nt">&lt;角色演員&gt;</span>
+        <span class="nt">&lt;角色&gt;</span>Ross Geller<span class="nt">&lt;/角色&gt;</span>
+        <span class="nt">&lt;演員&gt;</span>David Schwimmer<span class="nt">&lt;/演員&gt;</span>
+    <span class="nt">&lt;/角色演員&gt;</span>
+<span class="nt">&lt;/六人行&gt;</span>
 </pre></div>
 
 </div>
@@ -13283,31 +12200,238 @@ I	love	Friends
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#32244;&#32722;">&#32244;&#32722;<a class="anchor-link" href="#&#32244;&#32722;">&#182;</a></h2><ul>
-<li>選出 <code>foot</code>、<code>boot</code> 或是 <code>hoot</code></li>
+<h2 id="&#35469;&#35672;-XML&#65288;2&#65289;">&#35469;&#35672; XML&#65288;2&#65289;<a class="anchor-link" href="#&#35469;&#35672;-XML&#65288;2&#65289;">&#182;</a></h2><ul>
+<li>在 R 語言中可以透過 <code>xml2</code> 套件所提供的 <code>read_xml()</code> 函數讀取 XML</li>
 </ul>
-<div class="highlight"><pre><span></span>words <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;foot&quot;</span><span class="p">,</span> <span class="s">&quot;zoot&quot;</span><span class="p">,</span> <span class="s">&quot;hoot&quot;</span><span class="p">,</span> <span class="s">&quot;boot&quot;</span><span class="p">,</span> <span class="s">&quot;food&quot;</span><span class="p">)</span>
-subset_logic <span class="o">&lt;-</span> <span class="kp">grepl</span><span class="p">(</span>pattern <span class="o">=</span> <span class="s">&quot;____&quot;</span><span class="p">,</span> ____<span class="p">)</span>
-wordsp<span class="p">[</span>subset_logic<span class="p">]</span>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># install.packages(&quot;xml2&quot;)</span>
+<span class="kn">library</span><span class="p">(</span>xml2<span class="p">)</span>
+
+fs_xml <span class="o">&lt;-</span> <span class="s">&quot;</span>
+<span class="s">&lt;六人行&gt;</span>
+<span class="s">    &lt;角色演員&gt;</span>
+<span class="s">        &lt;角色&gt;Rachel Green&lt;/角色&gt;</span>
+<span class="s">        &lt;演員&gt;Jennifer Aniston&lt;/演員&gt;</span>
+<span class="s">    &lt;/角色演員&gt;</span>
+<span class="s">        &lt;角色&gt;Monica Geller&lt;/角色&gt;</span>
+<span class="s">        &lt;演員&gt;Courteney Cox&lt;/演員&gt;</span>
+<span class="s">    &lt;角色演員&gt;</span>
+<span class="s">        &lt;角色&gt;Phoebe Buffay&lt;/角色&gt;</span>
+<span class="s">        &lt;演員&gt;Lisa Kudrow&lt;/演員&gt;</span>
+<span class="s">    &lt;/角色演員&gt;</span>
+<span class="s">    &lt;角色演員&gt;</span>
+<span class="s">        &lt;角色&gt;Joey Tribbiani&lt;/角色&gt;</span>
+<span class="s">        &lt;演員&gt;Matt LeBlanc&lt;/演員&gt;</span>
+<span class="s">    &lt;/角色演員&gt;</span>
+<span class="s">    &lt;角色演員&gt;</span>
+<span class="s">        &lt;角色&gt;Chandler Bing&lt;/角色&gt;</span>
+<span class="s">        &lt;演員&gt;Matthew Perry&lt;/演員&gt;</span>
+<span class="s">    &lt;/角色演員&gt;</span>
+<span class="s">    &lt;角色演員&gt;</span>
+<span class="s">        &lt;角色&gt;Ross Geller&lt;/角色&gt;</span>
+<span class="s">        &lt;演員&gt;David Schwimmer&lt;/演員&gt;</span>
+<span class="s">    &lt;/角色演員&gt;</span>
+<span class="s">&lt;/六人行&gt;</span>
+<span class="s">&quot;</span>
+
+fs <span class="o">&lt;-</span> read_xml<span class="p">(</span>fs_xml<span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
+
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#21443;&#32771;&#36899;&#32080;">&#21443;&#32771;&#36899;&#32080;<a class="anchor-link" href="#&#21443;&#32771;&#36899;&#32080;">&#182;</a></h2><ul>
-<li><a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/regex.html">Regular Expressions as used in R</a></li>
-<li><a href="http://ccckmit.wikidot.com/regularexpression">正規表示式 Regular Expression</a></li>
-<li><a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions">https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions</a></li>
-<li><a href="http://www.livesinabox.com/friends/">Crazy for Friends</a></li>
+<h2 id="&#35469;&#35672;-XML&#65288;3&#65289;">&#35469;&#35672; XML&#65288;3&#65289;<a class="anchor-link" href="#&#35469;&#35672;-XML&#65288;3&#65289;">&#182;</a></h2><ul>
+<li>接著可以透過 <code>xml2</code> 套件提供的其他函數來解析<ul>
+<li><code>xml_name()</code></li>
+<li><code>xml_children()</code></li>
+<li><code>xml_text()</code></li>
+<li><code>xml_find_all()</code></li>
+</ul>
+</li>
 </ul>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>fs_name <span class="o">&lt;-</span> xml_name<span class="p">(</span>fs<span class="p">)</span>
+fs_children <span class="o">&lt;-</span> xml_children<span class="p">(</span>fs<span class="p">)</span>
+fs_characters <span class="o">&lt;-</span> xml_find_all<span class="p">(</span>fs<span class="p">,</span> xpath <span class="o">=</span> <span class="s">&quot;.//角色&quot;</span><span class="p">)</span>
+fs_stars <span class="o">&lt;-</span> xml_find_all<span class="p">(</span>fs<span class="p">,</span> xpath <span class="o">=</span> <span class="s">&quot;.//演員&quot;</span><span class="p">)</span>
+
+fs_characters
+fs_stars
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_text output_subarea ">
+<pre>{xml_nodeset (6)}
+[1] &lt;角色&gt;Rachel Green&lt;/角色&gt;
+[2] &lt;角色&gt;Monica Geller&lt;/角色&gt;
+[3] &lt;角色&gt;Phoebe Buffay&lt;/角色&gt;
+[4] &lt;角色&gt;Joey Tribbiani&lt;/角色&gt;
+[5] &lt;角色&gt;Chandler Bing&lt;/角色&gt;
+[6] &lt;角色&gt;Ross Geller&lt;/角色&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_text output_subarea ">
+<pre>{xml_nodeset (6)}
+[1] &lt;演員&gt;Jennifer Aniston&lt;/演員&gt;
+[2] &lt;演員&gt;Courteney Cox&lt;/演員&gt;
+[3] &lt;演員&gt;Lisa Kudrow&lt;/演員&gt;
+[4] &lt;演員&gt;Matt LeBlanc&lt;/演員&gt;
+[5] &lt;演員&gt;Matthew Perry&lt;/演員&gt;
+[6] &lt;演員&gt;David Schwimmer&lt;/演員&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#35469;&#35672;-XML&#65288;4&#65289;">&#35469;&#35672; XML&#65288;4&#65289;<a class="anchor-link" href="#&#35469;&#35672;-XML&#65288;4&#65289;">&#182;</a></h2><ul>
+<li>使用 <code>%&gt;%</code> 加速資料解析</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># install.packages(&quot;xml2&quot;)</span>
+<span class="c1"># install.packages(&quot;magrittr&quot;)</span>
+<span class="kn">library</span><span class="p">(</span>xml2<span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span>magrittr<span class="p">)</span>
+
+fs_characters <span class="o">&lt;-</span> fs <span class="o">%&gt;%</span>
+    xml_find_all<span class="p">(</span>xpath <span class="o">=</span> <span class="s">&quot;.//角色&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+    xml_text<span class="p">()</span>
+fs_stars <span class="o">&lt;-</span> fs <span class="o">%&gt;%</span>
+    xml_find_all<span class="p">(</span>xpath <span class="o">=</span> <span class="s">&quot;.//演員&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+    xml_text<span class="p">()</span>
+
+<span class="kr">for</span> <span class="p">(</span>i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span><span class="kp">length</span><span class="p">(</span>fs_characters<span class="p">)){</span>
+    <span class="kp">print</span><span class="p">(</span><span class="kp">paste</span><span class="p">(</span><span class="s">&quot;誰飾演&quot;</span><span class="p">,</span> fs_characters<span class="p">[</span>i<span class="p">],</span> <span class="s">&quot;：&quot;</span><span class="p">,</span> fs_stars<span class="p">[</span>i<span class="p">]))</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] &#34;誰飾演 Rachel Green ： Jennifer Aniston&#34;
+[1] &#34;誰飾演 Monica Geller ： Courteney Cox&#34;
+[1] &#34;誰飾演 Phoebe Buffay ： Lisa Kudrow&#34;
+[1] &#34;誰飾演 Joey Tribbiani ： Matt LeBlanc&#34;
+[1] &#34;誰飾演 Chandler Bing ： Matthew Perry&#34;
+[1] &#34;誰飾演 Ross Geller ： David Schwimmer&#34;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#32244;&#32722;">&#32244;&#32722;<a class="anchor-link" href="#&#32244;&#32722;">&#182;</a></h2><ul>
+<li>列出芝加哥公牛隊 1995-96 年先發五人的位置與球員</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># install.packages(&quot;xml2&quot;)</span>
+<span class="kn">library</span><span class="p">(</span>xml2<span class="p">)</span>
+
+cb_xml <span class="o">&lt;-</span> <span class="s">&quot;</span>
+<span class="s">&lt;芝加哥公牛隊先發&gt;</span>
+<span class="s">    &lt;位置球員&gt;</span>
+<span class="s">        &lt;位置&gt;SF&lt;/位置&gt;</span>
+<span class="s">        &lt;球員&gt;Scottie Pippen&lt;/球員&gt;</span>
+<span class="s">    &lt;/位置球員&gt;</span>
+<span class="s">        &lt;位置&gt;PF&lt;/位置&gt;</span>
+<span class="s">        &lt;球員&gt;Dennis Rodman&lt;/球員&gt;</span>
+<span class="s">    &lt;位置球員&gt;</span>
+<span class="s">        &lt;位置&gt;C&lt;/位置&gt;</span>
+<span class="s">        &lt;球員&gt;Luc Longley&lt;/球員&gt;</span>
+<span class="s">    &lt;/位置球員&gt;</span>
+<span class="s">    &lt;位置球員&gt;</span>
+<span class="s">        &lt;位置&gt;PG&lt;/位置&gt;</span>
+<span class="s">        &lt;球員&gt;Ron Harper&lt;/球員&gt;</span>
+<span class="s">    &lt;/位置球員&gt;</span>
+<span class="s">    &lt;位置球員&gt;</span>
+<span class="s">        &lt;位置&gt;SG&lt;/位置&gt;</span>
+<span class="s">        &lt;球員&gt;Michael Jordan&lt;/球員&gt;</span>
+<span class="s">    &lt;/位置球員&gt;</span>
+<span class="s">&lt;/芝加哥公牛隊先發&gt;</span>
+<span class="s">&quot;</span>
+
+<span class="c1"># 這裡寫你的答案</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div></section></section>
 </div>
 </div>
