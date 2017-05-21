@@ -23,7 +23,7 @@
 
 ### 近期上課錄影
 
-- [282 期]()
+- [282 期](https://www.youtube.com/playlist?list=PLEq7iw5uOtuXr6c_YiNHCmYuN_uULhY5E)
 
 ### 推薦學習資源/書籍
 
