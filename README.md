@@ -17,7 +17,8 @@
 - [認識 JSON 與 XML](http://yaojenkuo.io/r-crawler/chapter03.slides.html)
 - [認識 HTML 與 CSS](http://yaojenkuo.io/r-crawler/chapter04.slides.html)
 - [`readLines() 函數`](http://yaojenkuo.io/r-crawler/chapter05.slides.html)
-- [`rvest` 套件]()
+- [使用 %>% 簡化程式](http://yaojenkuo.io/r_programming/ch12)
+- [`rvest` 套件](http://yaojenkuo.io/r-crawler/chapter06.slides.html)
 - [CSS 與 Xpath 選擇]()
 - [`rvest` 套件（2）]()
 
