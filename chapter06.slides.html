@@ -11908,7 +11908,7 @@ a.anchor-link {
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>rvest<span class="p">)</span>
 
-url <span class="o">&lt;-</span> <span class="s">&quot;http://www.imdb.com/title/tt3783958/?ref_=fn_al_tt_2&quot;</span>
+url <span class="o">&lt;-</span> <span class="s">&quot;http://www.imdb.com/title/tt3783958/&quot;</span>
 lalaland <span class="o">&lt;-</span> read_html<span class="p">(</span><span class="kp">url</span><span class="p">)</span>
 </pre></div>
 
@@ -11936,7 +11936,7 @@ lalaland <span class="o">&lt;-</span> read_html<span class="p">(</span><span cla
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>rvest<span class="p">)</span>
 
-url <span class="o">&lt;-</span> <span class="s">&quot;http://www.imdb.com/title/tt3783958/?ref_=fn_al_tt_2&quot;</span>
+url <span class="o">&lt;-</span> <span class="s">&quot;http://www.imdb.com/title/tt3783958/&quot;</span>
 lalaland <span class="o">&lt;-</span> read_html<span class="p">(</span><span class="kp">url</span><span class="p">)</span>
 rating <span class="o">&lt;-</span> lalaland <span class="o">%&gt;%</span> html_nodes<span class="p">(</span>css <span class="o">=</span> <span class="s">&quot;strong span&quot;</span><span class="p">)</span>
 rating
@@ -11983,7 +11983,7 @@ rating
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>rvest<span class="p">)</span>
 
-url <span class="o">&lt;-</span> <span class="s">&quot;http://www.imdb.com/title/tt3783958/?ref_=fn_al_tt_2&quot;</span>
+url <span class="o">&lt;-</span> <span class="s">&quot;http://www.imdb.com/title/tt3783958/&quot;</span>
 lalaland <span class="o">&lt;-</span> read_html<span class="p">(</span><span class="kp">url</span><span class="p">)</span>
 rating <span class="o">&lt;-</span> lalaland <span class="o">%&gt;%</span>
     html_nodes<span class="p">(</span>css <span class="o">=</span> <span class="s">&quot;strong span&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>
@@ -12031,7 +12031,7 @@ rating
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>rvest<span class="p">)</span>
 
-url <span class="o">&lt;-</span> <span class="s">&quot;http://www.imdb.com/title/tt3783958/?ref_=fn_al_tt_2&quot;</span>
+url <span class="o">&lt;-</span> <span class="s">&quot;http://www.imdb.com/title/tt3783958/&quot;</span>
 lalaland <span class="o">&lt;-</span> read_html<span class="p">(</span><span class="kp">url</span><span class="p">)</span>
 rating <span class="o">&lt;-</span> lalaland <span class="o">%&gt;%</span>
     html_nodes<span class="p">(</span>xpath <span class="o">=</span> <span class="s">&quot;//strong/span&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>
@@ -12067,7 +12067,7 @@ rating
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#32244;&#32722;">&#32244;&#32722;<a class="anchor-link" href="#&#32244;&#32722;">&#182;</a></h2><ul>
 <li>用 CSS selector 跟 XPath selector 將演員名單擷取出來</li>
-<li>CSS: <code>#titleCast .itemprop span</code></li>
+<li>CSS: <code>.itemprop .itemprop</code></li>
 <li>XPath: <code>//td[@class='itemprop']/a/span[@class='itemprop']</code></li>
 </ul>
 
