@@ -19,8 +19,7 @@
 - [`readLines() 函數`](http://yaojenkuo.io/r-crawler/chapter05.slides.html)
 - [使用 %>% 簡化程式](http://yaojenkuo.io/r_programming/ch12)
 - [`rvest` 套件](http://yaojenkuo.io/r-crawler/chapter06.slides.html)
-- [CSS 與 Xpath 選擇]()
-- [`rvest` 套件（2）]()
+- [CSS 與 Xpath 選擇](http://yaojenkuo.io/r-crawler/chapter07.slides.html)
 
 ### 近期上課錄影
 
