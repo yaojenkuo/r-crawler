@@ -21,6 +21,7 @@
 - [`rvest` 套件](http://yaojenkuo.io/r-crawler/chapter06.slides.html)
 - [CSS 與 Xpath 選擇](http://yaojenkuo.io/r-crawler/chapter07.slides.html)
 - [爬蟲練習](http://yaojenkuo.io/r-crawler/chapter08.slides.html)
+- [爬蟲練習（2）](http://yaojenkuo.io/r-crawler/chapter09.slides.html)
 
 ### 近期上課錄影
 
