@@ -29,6 +29,7 @@
 
 ### 近期上課錄影
 
+- [289 期](https://www.youtube.com/playlist?list=PLEq7iw5uOtuXnsrdGcmR8G6czMwnEKlf3)
 - [283 期](https://www.youtube.com/playlist?list=PLEq7iw5uOtuXd8iAn2CWHpcCcI5lnw8X5)
 - [282 期](https://www.youtube.com/playlist?list=PLEq7iw5uOtuXr6c_YiNHCmYuN_uULhY5E)
 
