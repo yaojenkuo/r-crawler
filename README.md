@@ -35,4 +35,4 @@
 
 ### 推薦學習資源/書籍
 
-- [輕鬆學習 R 語言](https://www.learn-r-the-easy-way.tw/)
+- [輕鬆學習 R 語言](http://www.learn-r-the-easy-way.tw/)
